@@ -1,0 +1,131 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-Montserrat: 'Montserrat', sans-serif;
+  --font-Inter: 'Inter', sans-serif;
+
+  --breakpoint-xxs: 375px;
+  --breakpoint-xs: 440px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-4k: 1920px;
+
+  --color-green: #009539;
+  --color-text: #4e4e4d;
+}
+
+body {
+  font-family: var(--font-Inter);
+  color: #000;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-Montserrat);
+}
+
+.stepShadow {
+  box-shadow: 0px 11px 24px 0px rgba(0, 0, 0, 0.25);
+}
+.testimonialImageShadow {
+  box-shadow: inset 0px 4px 61.29999923706055px 0px rgba(13, 153, 255, 0.4),
+    0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.accordion-content {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  width: 100%;
+  max-height: 0;
+  opacity: 0;
+}
+
+.accordion-content.open {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.openArrow {
+  transform: rotate(180deg);
+}
+.faqShadow {
+  box-shadow: 0px 4px 8px 0px rgba(180, 180, 180, 0.32);
+  background: rgba(245, 245, 245, 1);
+}
+/* for the fix header  */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.listShadow {
+  box-shadow: 0px 11px 24px 0px rgba(0, 0, 0, 0.25);
+}
+.fade-leave {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.fade-leave-active {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.memebership-banner {
+  background: url(../images/memebership-banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.calculateShadow {
+  box-shadow: 0px 11px 24px 0px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 1);
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background-color: rgba(0, 149, 57, 1);
+  border-radius: 9999px;
+  outline: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  background: radial-gradient(white 30%, #009539 40%);
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+  background-color: #009539;
+  transform: scale(1.1);
+}
+@media (max-width: 500px) {
+  input[type='range']::-webkit-slider-thumb {
+    width: 17px;
+    height: 17px;
+  }
+
+  input[type='range'] {
+    height: 2px;
+  }
+}
