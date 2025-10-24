@@ -16,7 +16,9 @@
   --color-green: #009539;
   --color-text: #4e4e4d;
 }
-
+html {
+  scroll-padding-top: 100px;
+}
 body {
   font-family: var(--font-Inter);
   color: #000;
